@@ -7,3 +7,9 @@
 
   gtag('config', '{{ site.google_analytics_4 }}');
 </script>
+
+{%- if site.cmp -%}
+{%- if site.cmp == 'cookiebot' -%}
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="{{ site.cookiebot_id }}" type="text/javascript" async></script>
+{%- endif -%}
+{%- endif -%}

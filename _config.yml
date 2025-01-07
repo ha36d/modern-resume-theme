@@ -48,6 +48,8 @@ additional_links:
 # gtag: "UA-00000000-0"
 # google_analytics: "UA-00000000-0"
 # google_analytics_4: "G-0000000000"
+# cmp: cookiebot
+# cookiebot_id: "00000000-0000-0000-0000-000000000000"
 
 # About Section
 # about_title: About Me (Use this to override about section title)
