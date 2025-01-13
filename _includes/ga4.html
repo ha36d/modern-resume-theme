@@ -11,8 +11,7 @@
 {%- if site.cmp -%}
 {%- if site.cmp == 'cookiebot' -%}
 <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="{{ site.cookiebot_id }}" type="text/javascript" async></script>
-{%- endif -%}
-{%- if site.cmp == 'iubenda' -%}
+{%- elsif site.cmp == 'iubenda' -%}
 <script type="text/javascript">
   var _iub = _iub || [];
   _iub.csConfiguration = {"siteId":"{{ site.iubenda_siteId }}","cookiePolicyId":"{{ site.iubenda_cookiePolicyId }}","lang":"en","storage":{"useSiteId":true}};
@@ -20,5 +19,15 @@
 <script type="text/javascript" src="https://cs.iubenda.com/autoblocking/{{ site.iubenda_siteId }}.js"></script>
 <script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
 <script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+{%- elsif site.cmp == 'iubenda' -%}
+<script type="text/javascript">
+  var _iub = _iub || [];
+  _iub.csConfiguration = {"siteId":"{{ site.iubenda_siteId }}","cookiePolicyId":"{{ site.iubenda_cookiePolicyId }}","lang":"en","storage":{"useSiteId":true}};
+</script>
+<script type="text/javascript" src="https://cs.iubenda.com/autoblocking/{{ site.iubenda_siteId }}.js"></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/gpp/stub.js"></script>
+<script type="text/javascript" src="//cdn.iubenda.com/cs/iubenda_cs.js" charset="UTF-8" async></script>
+{%- elsif site.cmp == 'cookie-script' -%}
+<script type="text/javascript" charset="UTF-8" src="//cdn.cookie-script.com/s/{{ site.cookie-scriptID }}.js"></script>
 {%- endif -%}
 {%- endif -%}
