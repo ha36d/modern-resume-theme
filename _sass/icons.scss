@@ -1,10 +1,16 @@
-ul.icons a:hover {
-  background: rgba(0, 0, 0, 0.025);
+ul.icons {
+  padding: 0;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  text-align: right;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 0.75rem;
 }
 
 ul.icons li {
-  display: inline-block;
-  padding-left: 0.5rem; /* Reduce padding for better spacing */
+  list-style: none;
 }
 
 ul.icons a {
@@ -12,39 +18,31 @@ ul.icons a {
   -webkit-transition: background-color 0.25s ease-in-out;
   -ms-transition: background-color 0.25s ease-in-out;
   transition: background-color 0.25s ease-in-out;
-  display: inline-block;
-  width: 2.5rem; /* Slightly reduce icon size */
-  height: 2.5rem;
-  line-height: 2.5rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
   text-align: center;
   border: 0;
   box-shadow: none;
   padding: 0;
   border-radius: 100%;
   color: #aaa;
+  background: transparent;
+}
+
+ul.icons a:hover {
+  background: rgba(0, 0, 0, 0.025);
 }
 
 .icons i {
-  font-size: 24px; /* Reduce icon font size */
-  line-height: 2.5rem;
-}
-
-.icons {
-  display: flex; /* Use flexbox for layout */
-  flex-wrap: wrap; /* Allow icons to wrap to the next line */
-  justify-content: center; /* Center the icons */
-  gap: 10px; /* Add spacing between icons */
-  max-width: 300px; /* Limit the width to fit two lines */
-  margin: 0 auto; /* Center the container */
-  padding: 0;
-  font-size: 1rem;
-  margin-bottom: 20px;
+  font-size: 30px;
 }
 
 @media screen and (max-width: 768px) {
-  .icons {
-    max-width: 100%; /* Allow full width on smaller screens */
-    gap: 8px; /* Adjust spacing for smaller screens */
+  ul.icons {
+    justify-content: center;
   }
 }
 
